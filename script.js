@@ -71,38 +71,4 @@ $(document).ready(function(){
     });
 });
 
-/**Contac Form**/
-
-((document)=>{
-   contac$form=d.querrySelector(".contact-form"),
-   $loader=d.querrySelector(".contact-form-loader"),
-   $response = d.querrySelector(".");
-   cont ac$form = d.querrySelector(".");
-   
-   $form.addEventListener("submit",e=> {
-       e.preventDefault();
-       $loader.classList.remove("none");
-       fetch("https://formsubmit/ajax/hksanchez25@gmail.com",{
-        method:"Post",
-        body:new FormData(e.target)
-   })
-   .then((res) => (res.ok?res.json():Promise.reject()))
-   .then(json=>{
-       console.log(json);
-       location.hash = "#Gracias Por Los Comentarios";
-       $form.reset();
-   })
-   .catch(Error=>{
-       console.log(Error);
-       let message = Error.statusText ║ "Ocurrió un error al enviar, intenta nueva mente"
-       $response.querrySelector("h3").innerHTML= 'Error${$error.status}:${message}';
-       $loader.classList.add("none");
-     }).finally{()=>{
-       $loader.classList.add("none");
-       setTimeout(()=>{
-        location.hash = "close";
-       },3000);
-     }};
-    });
-})(document);
 
