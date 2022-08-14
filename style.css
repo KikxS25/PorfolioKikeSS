@@ -70,16 +70,24 @@ section .title::before {
   height: 3px;
   background: #111;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 section .title::after {
   position: absolute;
   bottom: -8px;
   left: 50%;
   font-size: 20px;
-  color: #f30000;
+  color: goldenrod;
   padding: 0 5px;
   background: #fff;
   transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 /* navbar styling */
@@ -169,7 +177,7 @@ section .title::after {
 /* home section styling */
 .home {
   display: flex;
-  background: url("images/banner3.jpg") no-repeat center;
+  background: url("images/banner1A.jpg") no-repeat center;
   height: 100vh;
   color: #f30000;
   min-height: 500px;
@@ -395,6 +403,13 @@ a {
 
 .skills .title::after {
   content: "Mi nivel";
+  background-color: #111;
+  font-size: 30px;
+}
+.skills{
+  background: #111;
+   content: "Mi nivel";
+  color: goldenrod;
 }
 .skills .skills-content .column {
   width: calc(50% - 30px);
@@ -439,11 +454,11 @@ a {
 .skills .skills-content .right .line {
   height: 5px;
   width: 100%;
-  background: lightgrey;
+  background: goldenrod;
   position: relative;
 }
 .skills .skills-content .right .line::before {
-  content: "";
+  content: "Mi nivel";
   position: absolute;
   height: 100%;
   left: 0;
