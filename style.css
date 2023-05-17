@@ -177,13 +177,22 @@ section .title::after {
 /* home section styling */
 .home {
   display: flex;
-  background: url("") no-repeat center;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
-  color: #f30000;
   min-height: 500px;
+  background-image: url("sistemad/images/futuristacircuitodorado.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  color: #f30000;
   font-family: "Ubuntu", sans-serif;
+  transition: background-image 0.5s ease-in-out;
+}
+.home:hover {
+  background-size: 110%;
+  background-position: top;
 }
 .home .max-width {
   margin: auto 0 auto 30px;
